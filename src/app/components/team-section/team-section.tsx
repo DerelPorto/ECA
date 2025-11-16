@@ -26,55 +26,82 @@ export function TeamSection() {
     {
       name: "Luis Fernández",
       role: "Auditor Senior",
-      image: "/professional-man-auditor.jpg",
+      image: "/professional-man-auditor.png",
     },
   ]
 
   return (
-    <section id="equipo" className="py-24 bg-[#B0B3B8]/20" ref={ref}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section
+      id="equipo"
+      ref={ref}
+      className="py-28 relative overflow-hidden bg-gradient-to-br from-[#EFF3FA] via-[#E4EBF5] to-[#DCE4EF]"
+    >
+      {/* Textura de fondo */}
+      <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-20" />
+      <div className="absolute inset-0 bg-[url('/patterns/lines.svg')] opacity-10 mix-blend-soft-light" />
+
+      {/* Contenido */}
+      <div className="container mx-auto px-6 relative z-10">
+
+        {/* Title */}
+        <div className="text-center mb-20 max-w-3xl mx-auto">
           <h2
-            className={`text-4xl md:text-5xl font-bold text-[#0A2342] mb-4 transition-all duration-1000 ${
-              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            className={`text-4xl md:text-5xl font-bold text-[#0A2342] mb-4 transition-all duration-[1200ms] ${
+              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Nuestro Equipo
           </h2>
+
           <p
-            className={`text-lg text-[#0A2342]/70 max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
-              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            className={`text-lg text-[#0A2342]/70 transition-all duration-[1200ms] delay-150 ${
+              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Profesionales comprometidos con tu éxito empresarial
+            Expertos dedicados a impulsar el crecimiento y la estabilidad financiera de tu empresa.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        {/* Team Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
           {team.map((member, index) => (
             <Card
               key={member.name}
-              className={`group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-[#C6C8CA]/30 ${
-                isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
+              className={`relative group overflow-hidden transition-all duration-700 border border-[#C6C8CA]/40 rounded-2xl
+                hover:shadow-[0_20px_40px_-10px_rgba(10,35,66,0.25)]
+                hover:-translate-y-3 bg-white/70 backdrop-blur-sm
+                ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+              `}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="relative aspect-square overflow-hidden">
+              {/* Cinta superior */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#5A77A8] to-[#0A2342]" />
+
+              {/* Image */}
+              <div className="relative overflow-hidden aspect-[1/1.1]">
                 <img
-                  src={member.image || "/placeholder.svg"}
+                  src={member.image}
                   alt={member.name}
-                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2342] via-[#0A2342]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-4">
-                  <button className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors">
+
+                {/* Overlay con spotlight */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2342]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+
+                {/* Social Icons */}
+                <div className="absolute bottom-4 w-full flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <a className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer">
                     <Linkedin size={20} className="text-white" />
-                  </button>
-                  <button className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors">
+                  </a>
+
+                  <a className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer">
                     <Mail size={20} className="text-white" />
-                  </button>
+                  </a>
                 </div>
               </div>
+
+              {/* Content */}
               <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold text-[#0A2342] mb-1">{member.name}</h3>
                 <p className="text-[#5A77A8] font-medium">{member.role}</p>
@@ -82,6 +109,24 @@ export function TeamSection() {
             </Card>
           ))}
         </div>
+
+        {/* CTA final */}
+        <div
+          className={`text-center mt-20 transition-all duration-[1200ms] delay-300 ${
+            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
+        >
+          <p className="text-[#0A2342]/70 text-lg mb-4">
+            ¿Deseas trabajar con un equipo profesional y comprometido?
+          </p>
+          <a
+            href="#contacto"
+            className="inline-block bg-[#0A2342] text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-[#0A2342]/90 transition-all hover:scale-[1.03]"
+          >
+            Contáctanos
+          </a>
+        </div>
+
       </div>
     </section>
   )
