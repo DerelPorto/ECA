@@ -99,7 +99,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-[#0A2342] text-[#0A2342] bg-white hover:bg-[#0A2342] hover:text-white px-10 py-6 rounded-full shadow-md transition-all duration-300"
+                className="bg-[#0A2342] hover:bg-[#1a3a5f] text-white px-10 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
                 <Link href="/servicios">Ver Servicios</Link>
               </Button>
@@ -154,7 +154,7 @@ export function HeroSection() {
               <motion.div
                 key={stat.label}
                 whileHover={{ scale: 1.03 }}
-                className="flex flex-col items-center p-8 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 shadow-lg hover:shadow-xl transition"
+                className="flex flex-col items-center p-8 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 shadow-lg  transition"
               >
                 <Icon className="text-[#5A77A8] mb-3" size={34} />
                 <div className="text-3xl font-bold text-[#0A2342]">{stat.value}</div>
