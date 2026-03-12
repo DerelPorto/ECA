@@ -24,7 +24,21 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${inter.variable} font-sans antialiased`}>
-        {children}
+        {/* Marca de agua global del proyecto */}
+        <div
+          className="fixed inset-0 pointer-events-none z-50 opacity-[0.04]"
+          style={{
+            backgroundImage: "url('/Logo.png')",
+            backgroundRepeat: "repeat",
+            backgroundSize: "300px",
+            backgroundPosition: "center"
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10">
+          {children}
+        </div>
         <Analytics />
       </body>
     </html>

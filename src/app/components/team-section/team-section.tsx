@@ -9,23 +9,23 @@ export function TeamSection() {
 
   const team = [
     {
-      name: "María González",
-      role: "Directora General",
-      image: "/professional-woman-executive.png",
+      name: "Alina Dinzey Encarnacion",
+      role: "Managing Partner",
+      image: "/esposa.png",
     },
     {
-      name: "Carlos Rodríguez",
-      role: "Contador Público",
-      image: "/professional-accountant.png",
+      name: "Elmer Francis Figuereo",
+      role: "Especialista de Riesgos Laborales y Contrataciones",
+      image: "/elmer.png",
     },
     {
       name: "Ana Martínez",
-      role: "Asesora Fiscal",
+      role: "Gestor de Asuntos Regulatorios",
       image: "/professional-woman-consultant.png",
     },
     {
       name: "Luis Fernández",
-      role: "Auditor Senior",
+      role: "Asesor Legal",
       image: "/professional-man-auditor.png",
     },
   ]
@@ -46,25 +46,23 @@ export function TeamSection() {
         {/* Title */}
         <div className="text-center mb-20 max-w-3xl mx-auto">
           <h2
-            className={`text-4xl md:text-5xl font-bold text-[#0A2342] mb-4 transition-all duration-[1200ms] ${
-              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`text-4xl md:text-5xl font-bold text-[#0A2342] mb-4 transition-all duration-[1200ms] ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Nuestro Equipo
           </h2>
 
           <p
-            className={`text-lg text-[#0A2342]/70 transition-all duration-[1200ms] delay-150 ${
-              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`text-lg text-[#0A2342]/70 transition-all duration-[1200ms] delay-150 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             Expertos dedicados a impulsar el crecimiento y la estabilidad financiera de tu empresa.
           </p>
         </div>
 
         {/* Team Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 item-center justify-center lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
           {team.map((member, index) => (
             <Card
               key={member.name}
@@ -112,9 +110,8 @@ export function TeamSection() {
 
         {/* CTA final */}
         <div
-          className={`text-center mt-20 transition-all duration-[1200ms] delay-300 ${
-            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-          }`}
+          className={`text-center mt-20 transition-all duration-[1200ms] delay-300 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+            }`}
         >
           <p className="text-[#0A2342]/70 text-lg mb-4">
             ¿Deseas trabajar con un equipo profesional y comprometido?
