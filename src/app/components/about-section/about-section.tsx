@@ -37,9 +37,8 @@ export function AboutSection() {
 
           {/* --- IMAGE AREA --- */}
           <div
-            className={`transition-all duration-[1200ms] ease-out ${
-              isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-14"
-            }`}
+            className={`transition-all duration-[1200ms] ease-out ${isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-14"
+              }`}
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
               <img
@@ -57,9 +56,8 @@ export function AboutSection() {
 
             {/* Floating image (optional) */}
             <div
-              className={`absolute -bottom-10 -right-10 w-40 h-40 rounded-2xl overflow-hidden shadow-xl hidden md:block transition-all duration-[1400ms] ${
-                isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`absolute -bottom-10 -right-10 w-40 h-40 rounded-2xl overflow-hidden shadow-xl hidden md:block transition-all duration-[1400ms] ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
             >
               <img
                 src="/office-working.jpg"
@@ -71,9 +69,8 @@ export function AboutSection() {
 
           {/* --- CONTENT AREA --- */}
           <div
-            className={`transition-all duration-[1200ms] delay-200 ease-out ${
-              isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-14"
-            }`}
+            className={`transition-all duration-[1200ms] delay-200 ease-out ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-14"
+              }`}
           >
             <h2
               className="text-4xl md:text-5xl font-extrabold text-[#0A2342] leading-tight mb-6"
@@ -83,7 +80,7 @@ export function AboutSection() {
             </h2>
 
             <p className="text-lg text-[#0A2342]/80 mb-5 leading-relaxed">
-              ACEL Finanzas Dominicanas SRL es una firma especializada en brindar
+              Acel consulting SRL es una firma especializada en brindar
               soluciones contables integrales para pequeñas y medianas empresas.
             </p>
 
@@ -99,9 +96,8 @@ export function AboutSection() {
                 <div
                   key={feature}
                   style={{ transitionDelay: `${300 + index * 120}ms` }}
-                  className={`flex items-center gap-3 transition-all duration-700 ${
-                    isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-                  }`}
+                  className={`flex items-center gap-3 transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+                    }`}
                 >
                   <CheckCircle2 className="text-[#5A77A8]" size={26} />
                   <span className="text-[#0A2342] font-medium text-lg">{feature}</span>
@@ -115,9 +111,8 @@ export function AboutSection() {
                 <div
                   key={stat.label}
                   style={{ transitionDelay: `${600 + index * 150}ms` }}
-                  className={`text-center transition-all duration-700 ${
-                    isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                  }`}
+                  className={`text-center transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                    }`}
                 >
                   <h3 className="text-3xl font-bold text-[#0A2342]">{stat.number}</h3>
                   <p className="text-[#0A2342]/70 text-sm">{stat.label}</p>
@@ -129,9 +124,8 @@ export function AboutSection() {
 
         {/* --- Misión / Visión Section --- */}
         <div
-          className={`mt-24 grid md:grid-cols-3 gap-10 transition-all duration-[1200ms] ${
-            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`mt-24 grid md:grid-cols-3 gap-10 transition-all duration-[1200ms] ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           {[
             {

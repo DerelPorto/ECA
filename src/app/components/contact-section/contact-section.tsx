@@ -33,13 +33,13 @@ export function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "acelfinanzassrl@gmail.com",
+      value: "acelconsultingsrl@gmail.com`",
       link: "mailto:acelfinanzassrl@gmail.com",
     },
     {
       icon: Instagram,
       title: "Instagram",
-      value: "@acelfinanzasdominicanas",
+      value: "@acelconsultingsrl@gmail.com",
       link: "https://instagram.com/acelfinanzasdominicanas",
     },
   ];

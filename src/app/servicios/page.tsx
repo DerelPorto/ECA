@@ -84,7 +84,7 @@ export default function ServiciosPage() {
       icon: FileCheck2,
       title: "Registro Sanitario",
       description: "Gestión de expedientes sanitarios.",
-      features: ["Medicamentos", "Cosméticos", "Productos sanitarios"],
+      features: ["Medicamentos", "Cosméticos", "Productos Sanitarios", "Alimentos", "Productos de higiene personal y del hogar"],
     },
     {
       icon: Shield,

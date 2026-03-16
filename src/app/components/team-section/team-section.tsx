@@ -9,7 +9,7 @@ export function TeamSection() {
 
   const team = [
     {
-      name: "Alina Dinzey Encarnacion",
+      name: "Alina Dinzey Encarnación",
       role: "Managing Partner",
       image: "/esposa.png",
     },
